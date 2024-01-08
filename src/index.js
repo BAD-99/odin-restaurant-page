@@ -1,14 +1,16 @@
 import './style.css';
+import quickElement from './element-helper';
+import displayHome from './home';
 
-const header = document.createElement('div');
-header.classList.add('flex');
-const home = document.createElement('div');
-home.textContent = 'Home';
-const menu = document.createElement('div');
-menu.textContent = 'Menu';
-const contact = document.createElement('div');
-contact.textContent = 'Contact';
+const header = quickElement('div', 'flex');
+const home = quickElement('button', '', 'Home');
+const menu = quickElement('button','','Menu');
+const contact = quickElement('button', '', 'Contact');
+
+const content = document.createElement('div');
+content.id = 'content';
 
 header.append(home, menu, contact);
-// console.log(header.className);
-document.body.appendChild(header);
+document.body.append(header, content);
+
+displayHome();
