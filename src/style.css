@@ -5,7 +5,7 @@
     --tiff: #97d8c4;
     --white: #eff2f1;
     --xanth: #f4b942;
-    --container-width: 400px;
+    --container-width: 50%;
 }
 
 @font-face {
@@ -20,9 +20,12 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--background);
+    background-attachment: fixed;
     margin: 0;
-    height: 100dvh;
-    width: 100dvw;
+    position: absolute;
+
+    left: 0;
+    right: 0;
 }
 
 .flex {
@@ -30,7 +33,7 @@ body {
     width: 100%;
     /* align-items: center; */
     justify-content: center;
-    background-color: rgba(239, 242, 241, 0.2);
+    background-color: var(--blue-gray);
     /* opacity: 20%; */
 
 }
@@ -70,8 +73,13 @@ button{
     font-family: 'Jelle', Arial, Helvetica, sans-serif;
 }
 
-.container h1{
+.title{
     padding: 2rem 0;
+
+}
+
+.container h1{
+    padding: 1rem 0;
     margin: 0;
     text-align: center;
     color: var(--tiff);
@@ -79,6 +87,6 @@ button{
 }
 
 .container p{
-    padding: 2rem;
+    padding: 1rem 2rem;
     margin: 0;
 }
