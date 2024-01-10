@@ -5,18 +5,18 @@
     --tiff: #97d8c4;
     --white: #eff2f1;
     --xanth: #f4b942;
-    --container-width: 50%;
+    --container-width: max(50%, 360px);
 }
 
 @font-face {
     font-family: 'Jelle';
     src: url('fonts/Jellee-Bold.woff2') format('woff2'),
-    url('fonts/Jellee-Bold.woff') format('woff');
+        url('fonts/Jellee-Bold.woff') format('woff');
 }
 
 body {
     background-image: url('images/leo-DTZaI8lolUk-unsplash.jpg');
-    background-size: contain;
+    background-size: max(100dvh, 80dvw);
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--background);
@@ -28,7 +28,7 @@ body {
     right: 0;
 }
 
-.flex {
+header {
     display: flex;
     width: 100%;
     /* align-items: center; */
@@ -38,7 +38,7 @@ body {
 
 }
 
-button{
+button {
     appearance: none;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,39 +54,78 @@ button{
     background-color: var(--xanth);
 }
 
-.flex button:hover{
+.flex button:hover {
     background-color: color-mix(in srgb, var(--xanth) 80%, white 20%);
 }
 
-#content{
+#content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container{
+.container {
     margin: 1rem 0;
     background-color: var(--sapphire);
     width: var(--container-width);
-    border-radius: 8px;
+    border-radius: 16px;
+    border: 8px solid var(--xanth);
     color: var(--white);
     font-family: 'Jelle', Arial, Helvetica, sans-serif;
+    padding: 1rem;
 }
 
-.title{
-    padding: 2rem 0;
-
-}
-
-.container h1{
+.title {
     padding: 1rem 0;
+
+}
+
+.container h1 {
+    padding: 0;
     margin: 0;
     text-align: center;
     color: var(--tiff);
     font-size: 3rem;
 }
 
-.container p{
+.container p {
     padding: 1rem 2rem;
+    font-size: 1.2rem;
     margin: 0;
+}
+
+.container>ul {
+    list-style: none;
+}
+
+.container>ul>li {
+    font-size: 1.2rem;
+}
+
+.employee-card {
+    display: flex;
+}
+
+#manager{
+    content: url('images/mohamadreza-azhdari-4lD0wEPzSjU-unsplash.jpg');
+    width: min(300px, 35%);
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#chef{
+    content: url('images/amy-leigh-barnard-SByb8Ch9XcQ-unsplash.jpg');
+    width: min(300px, 35%);
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#waitress{
+    content: url('images/valeriia-miller-veFlkAIjKJk-unsplash.jpg');
+    width: min(300px, 35%);
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    object-fit: cover;
 }

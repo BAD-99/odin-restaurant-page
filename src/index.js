@@ -11,7 +11,7 @@ function clearContent(){
     content.innerHTML = '';
 }
 
-const header = quickElement('div', 'flex');
+const header = quickElement('header', 'flex');
 const home = document.createElement('button');
 home.textContent = 'Home';
 home.addEventListener('click', ()=>{
@@ -33,7 +33,10 @@ contact.addEventListener('click', ()=>{
     // displayMenu();
 });
 header.append(home, menu, contact);
+
+const footer = quickElement('footer');
+
 document.body.append(header, content);
 
 // displayHome();
-displayMenu();
+displayHome();
