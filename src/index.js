@@ -35,8 +35,35 @@ contact.addEventListener('click', ()=>{
 header.append(home, menu, contact);
 
 const footer = quickElement('footer');
+const citations = document.createElement('div');
+footer.append(citations);
 
-document.body.append(header, content);
+const mohamadrezaCite = document.createElement('a');
+mohamadrezaCite.href = 'https://unsplash.com/photos/a-person-wearing-a-helmet-and-goggles-4lD0wEPzSjU';
+mohamadrezaCite.textContent = 'Mohamadreza Azhdari';
+
+const amyCite = document.createElement('a');
+amyCite.href = 'https://unsplash.com/photos/brown-and-black-dinosaur-illustration-SByb8Ch9XcQ';
+amyCite.textContent = 'Amy-Leigh Barnard';
+
+const valeriiaCite = document.createElement('a');
+valeriiaCite.href = 'https://unsplash.com/photos/white-pelican-on-brown-wooden-dock-during-daytime-veFlkAIjKJk';
+valeriiaCite.textContent = ' Valeriia Miller';
+
+const leoCite = document.createElement('a');
+leoCite.href = 'https://unsplash.com/photos/four-fighter-planes-in-grayscale-photography-DTZaI8lolUk';
+leoCite.textContent = 'Leo';
+
+
+citations.append(
+    quickElement('span','','Images used from: '),
+    mohamadrezaCite,
+    amyCite,
+    valeriiaCite,
+    leoCite
+);
+
+document.body.append(header, content, footer);
 
 // displayHome();
 displayHome();
