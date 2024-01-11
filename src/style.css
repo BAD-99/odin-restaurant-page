@@ -5,7 +5,7 @@
     --tiff: #97d8c4;
     --white: #eff2f1;
     --xanth: #f4b942;
-    --container-width: max(50%, 360px);
+    --container-width: clamp(400px, 50%, 720px);
 }
 
 @font-face {
@@ -16,16 +16,18 @@
 
 body {
     background-image: url('images/leo-DTZaI8lolUk-unsplash.jpg');
-    background-size: max(100dvh, 80dvw);
+    background-size: max(100dvh, 100dvw);
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--background);
     background-attachment: fixed;
     margin: 0;
     position: absolute;
-
+    min-height: 100vh;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -35,7 +37,25 @@ header {
     justify-content: center;
     background-color: var(--blue-gray);
     /* opacity: 20%; */
+}
 
+footer{
+    background-color: var(--sapphire);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    color: var(--white);
+    padding: 2rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* position: absolute; */
+    /* bottom: 0; */
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--xanth);
+    padding: 1rem;
 }
 
 button {
@@ -62,6 +82,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
 }
 
 .container {
@@ -104,6 +125,12 @@ button {
 
 .employee-card {
     display: flex;
+}
+.employee-info>li:first-of-type{
+    font-size: 2rem;
+}
+.employee-info>li:last-of-type{
+    font-size: 1rem;
 }
 
 #manager{
